@@ -4,7 +4,7 @@
 #Source data used in this project comes from:
 #https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-#Additional backgroun regarding the source information can be found here:
+#Additional background regarding the source information can be found here:
 #http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 #Load required package
