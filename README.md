@@ -1,5 +1,10 @@
 # Getting and Cleaning Data - Course Project
-###Jacob Lavelle - 25 October 2015
+### 25 October 2015
+
+
+NB: Given ambiguity about project expectations for the code book and the 
+README, as evidenced by the various discussion on the course forum, there 
+may be some overlap in the contents of the two files.
 
 The intent of this file is to explain the steps followed in processing,
 per the project requirements, of the data available at the following link:
@@ -8,7 +13,7 @@ per the project requirements, of the data available at the following link:
 
 ## Merging datasets & labeling variables
 
-### Reading in the data
+### Reading in the data and labeling columns
 Starting with the files referenced above, unzipped into the working 
 directory, the code reads in a total of 8 files.
 
@@ -53,17 +58,28 @@ Both the train and test datasets fit together in the same way:
 * "y" identifies the activity by a code
 * "x" contains the actual measurements
 
-For both the train and test datasets, respectively, the subject, y, and x 
-datasets were combined using the cbind function. Once all train data and 
-all test data was combined into their respective groups, both the entire 
-train and test datasets were combined using the rbind function.
-
-
-## Applying descriptive labels
-
+For both the "train" and "test" groups, respectively, the "subject", 
+"y", and "x" datasets were combined using the cbind function. Once all 
+"train" data and all "test" data was combined into their respective groups, 
+the consolidated "train" and "test" datasets were combined using the rbind 
+function.
 
 
 ## Extracting relevant variables
+Using the combined dataset ("all_data"), the code creates a vector 
+("temp_header") based onselect headers. This vector is used in identifying 
+the columns to be extracted. This vector includes "Subject" and "Activity" 
+as well as column headers containing "std" (standard deviation) or "mean" 
+(mean value). For the purposes of paring down the dataset as well as 
+practicing data manipulation techniques, headers containing "meanFreq" 
+(weighted average of the frequency components) were excluded from the 
+"temp_header" vector.
+
+The code then creates a new dataset ("all_data_new") from the "all_data" 
+dataset by selecting only those columns present in the "temp_header" vector. 
+
+
+## Applying descriptive activity labels
 
 
 ## Creation of a tidy data set
