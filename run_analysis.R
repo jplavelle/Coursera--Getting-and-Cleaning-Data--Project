@@ -52,6 +52,11 @@ all_data_new_group<-group_by(all_data_new,Subject,Activity)
 #Summarize data
 all_data_new_summarized<-summarize_each(all_data_new_group,funs(mean))
 
+#Update column labels
+new_headers<-c("Subject","Activity",paste("Average for subject and activity - ",
+                                          names(all_data_new_summarized)[-1:-2]))
+colnames(all_data_new_summarized)<-new_headers
+
 #Write data to file
 write.table(all_data_new_summarized,file="project_output.txt",row.names = FALSE)
 
