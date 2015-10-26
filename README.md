@@ -4,7 +4,9 @@
 
 NB: Given ambiguity about project expectations for the code book and the 
 README, as evidenced by the various discussion on the course forum, there 
-may be some overlap in the contents of the two files.
+may be some overlap in the contents of the two files. This README applies 
+to the run_analysis.R script which accompanies it in the Github Repo:
+<https://github.com/jplavelle/Coursera--Getting-and-Cleaning-Data--Project>
 
 The intent of this file is to explain the steps followed in processing,
 per the project requirements, of the data available at the following link:
@@ -101,6 +103,7 @@ column, the headers are updated to reflect this by way of a "new_headers"
 vector by way of the same approach as used when applying the original 
 column names. This vector contains "Subject", "Activity", and prefaces the 
 same variable names as before with "Average for subject and activity - ".
+
 
 ## Producing the output file
 Once the "all_data_new_summarized" dataset is prepared with updated 
