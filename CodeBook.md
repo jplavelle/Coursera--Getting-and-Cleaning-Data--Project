@@ -89,6 +89,7 @@ Additional vectors obtained by averaging the signals in a signal window sample. 
 * tBodyAccJerkMean
 * tBodyGyroMean
 * tBodyGyroJerkMean
+
 ===========================================================================
 
 After the transformations outlined below, the resulting fields will be:
